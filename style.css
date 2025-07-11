@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #b31217 0%, #e52d27 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#username-screen input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+#username-screen button, #gameover-screen button {
+  background: #e52d27;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#username-screen button:hover, #gameover-screen button:hover {
+  background: #b31217;
+}
+#game-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: none;
+}
+#game-canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: #fff3f3;
+  border: 3px solid #b31217;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  padding: 0;
+}
+#score {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #b31217;
+  font-weight: bold;
+  background: rgba(255,255,255,0.7);
+  padding: 8px 24px;
+  border-radius: 12px;
+}
+#gameover-screen h2, #gameover-screen h3 {
+  color: #e52d27;
+}
+#leaderboard {
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  min-width: 200px;
+}
+#username-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+.username-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/anoma5.png') center center/cover no-repeat;
+  z-index: 1;
+  filter: brightness(0.7) blur(2px);
+}
+.username-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(230, 30, 50, 0.85);
+  border-radius: 18px;
+  padding: 48px 36px 32px 36px;
+  box-shadow: 0 8px 32px rgba(179,18,23,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+.username-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 24px;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #b31217;
+}
+.username-content input {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 1.2em;
+  width: 220px;
+}
+.username-content button {
+  background: #e52d27;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.username-content button:hover {
+  background: #b31217;
+}
+.corner-x {
+  position: absolute;
+  bottom: 18px;
+  right: 32px;
+  z-index: 3;
+  color: #fff;
+  font-size: 1.1em;
+  font-family: monospace;
+  opacity: 0.85;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #b31217;
+}
+#gameover-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+.gameover-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/anoma5.png') center center/cover no-repeat;
+  z-index: 1;
+  filter: brightness(0.7) blur(2px);
+}
+.gameover-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(230, 30, 50, 0.85);
+  border-radius: 18px;
+  padding: 48px 36px 32px 36px;
+  box-shadow: 0 8px 32px rgba(179,18,23,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+.gameover-content h2 {
+  font-size: 2.2em;
+  margin-bottom: 18px;
+  color: #ffd6d6;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #b31217;
+}
+.gameover-content h3 {
+  color: #ffd6d6;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #b31217;
+}
+.gameover-content #final-score {
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 0 2px 8px #b31217;
+}
+.gameover-content #leaderboard {
+  background: rgba(255,255,255,0.13);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  min-width: 200px;
+  margin-bottom: 18px;
+}
+.gameover-content button {
+  background: #e52d27;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.gameover-content button:hover {
+  background: #b31217;
+} 

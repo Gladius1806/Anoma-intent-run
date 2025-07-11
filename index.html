@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anoma Dinozor Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="username-screen" class="screen">
+    <div class="username-bg"></div>
+    <div class="username-content">
+      <h1>Anoma Runner</h1>
+      <input type="text" id="username-input" placeholder="X username">
+      <button id="start-btn">Start</button>
+    </div>
+    <div class="corner-x">X: 0xCSauron</div>
+  </div>
+  <div id="game-screen" class="screen" style="display:none;">
+    <canvas id="game-canvas"></canvas>
+    <div id="score">Intent: 0</div>
+  </div>
+  <div id="gameover-screen" class="screen" style="display:none;">
+    <div class="gameover-bg"></div>
+    <div class="gameover-content">
+      <h2>Game Over!</h2>
+      <div id="final-score"></div>
+      <h3>Leaderboard</h3>
+      <ol id="leaderboard"></ol>
+      <button id="restart-btn">Play Again</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html> 
