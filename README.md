@@ -37,7 +37,7 @@
 
 ## 🔗 Try the Game
 
-Play it here 👉 [insert-your-game-link]
+Play it here 👉 [[insert-your-game-link](https://gladius1806.github.io/Anoma-intent-run/)]
 
 ---
 
